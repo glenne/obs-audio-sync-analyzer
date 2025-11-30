@@ -1,8 +1,8 @@
-# OBS Audio Delay Plugin
+# Audio Sync Analyzer
 
 ## Introduction
 
-This plugin adds an audio filter that measures delay between two audio channels to allow aligning audio streams with video.
+Audio Sync Analyzer adds an OBS audio filter that analyzes and corrects sync between sources using cross-correlation.
 
 Audio is sampled from the two audio inputs and a numerical correlation is done to identify the delay which provides the maximum correlation.  Provided the confidence level is high enough, the delay is considered 'valid'.
 
@@ -18,7 +18,7 @@ Audio is sampled from the two audio inputs and a numerical correlation is done t
 
 ```bash
 CI=1 ./.github/scripts/build-macos
-open /Users/glenne/git/obs-utilities/delay-plugin/release/RelWithDebInfo/audio-delay-meter.pkg
+open ./release/RelWithDebInfo/audio-sync-analyzer.pkg
 # restart OBS
 ```
 
@@ -31,4 +31,3 @@ clang-format -i src/*
 ## References
 
 This plugin was leveraged from the [OBS plugin template example](https://github.com/obsproject/obs-plugintemplate/wiki/Quick-Start-Guide).
-

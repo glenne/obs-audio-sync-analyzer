@@ -12,7 +12,7 @@ mac:
 	CI=1 ./.github/scripts/build-macos
 
 format:
-	clang-format -i src/*
+	clang-format -i src/plugin* src/audio*
 
 all: build
 
